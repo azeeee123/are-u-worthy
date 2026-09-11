@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Are You Worthy of Mjölnir?</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background lightning/particle canvas sits behind everything -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ================= LANDING SCREEN ================= -->
+  <section id="screen-landing" class="screen active">
+    <div class="landing-inner">
+
+      <!-- Hammer built entirely out of CSS shapes, no image files needed -->
+      <div class="hammer" id="landing-hammer">
+        <div class="hammer-head"></div>
+        <div class="hammer-handle"></div>
+        <div class="hammer-glow"></div>
+      </div>
+
+      <h1 class="title">ARE YOU WORTHY<br>OF MJÖLNIR?</h1>
+      <p class="subtitle">"The hammer does not choose the strongest. It chooses the worthy."</p>
+
+      <button id="btn-start" class="btn btn-primary">BEGIN THE WORTHINESS TEST ⚡</button>
+
+      <p class="disclaimer">This is a fan-made fictional experience inspired by Marvel mythology.</p>
+    </div>
+  </section>
+
+  <!-- ================= QUIZ SCREEN ================= -->
+  <section id="screen-quiz" class="screen">
+    <div class="quiz-inner">
+
+      <div class="quiz-top">
+        <p id="question-counter" class="question-counter">QUESTION 1 OF 15</p>
+        <div class="progress-track">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+      </div>
+
+      <div class="quiz-card">
+        <p id="question-category" class="question-category">CHARACTER</p>
+        <h2 id="question-text" class="question-text">Question text goes here</h2>
+
+        <div id="options-container" class="options-container">
+          <!-- 4 option buttons get inserted here by script.js -->
+        </div>
+      </div>
+
+      <p id="hammer-message" class="hammer-message"></p>
+    </div>
+  </section>
+
+  <!-- ================= JUDGMENT TRANSITION SCREEN ================= -->
+  <section id="screen-judgment" class="screen">
+    <div class="judgment-inner">
+      <p id="judgment-line-1" class="judgment-line">THE FINAL JUDGMENT</p>
+      <p id="judgment-line-2" class="judgment-line judgment-line-sub">MJÖLNIR IS JUDGING YOU...</p>
+      <div class="lightning-flash" id="lightning-flash"></div>
+    </div>
+  </section>
+
+  <!-- ================= RESULT SCREEN ================= -->
+  <section id="screen-result" class="screen">
+    <div class="result-inner">
+
+      <p id="result-emoji" class="result-emoji">⚡</p>
+      <h2 id="result-title" class="result-title">WORTHY</h2>
+      <p id="result-line" class="result-line">"Mjölnir accepts you."</p>
+
+      <div class="score-hero">
+        <p class="score-hero-label">WORTHINESS SCORE</p>
+        <p id="score-hero-value" class="score-hero-value">0%</p>
+      </div>
+
+      <div class="score-cards">
+        <div class="score-card">
+          <p class="score-card-icon">🛡️</p>
+          <p class="score-card-label">Character</p>
+          <p id="score-character" class="score-card-value">0%</p>
+        </div>
+        <div class="score-card">
+          <p class="score-card-icon">🔨</p>
+          <p class="score-card-label">Mjölnir Knowledge</p>
+          <p id="score-knowledge" class="score-card-value">0%</p>
+        </div>
+        <div class="score-card">
+          <p class="score-card-icon">⚡</p>
+          <p class="score-card-label">Asgardian Aura</p>
+          <p id="score-aura" class="score-card-value">0%</p>
+        </div>
+        <div class="score-card">
+          <p class="score-card-icon">👑</p>
+          <p class="score-card-label">Final Judgment</p>
+          <p id="score-final" class="score-card-value">0%</p>
+        </div>
+      </div>
+
+      <p id="result-funny-message" class="result-funny-message">
+        Congratulations. You may now carry the hammer. Please use your new powers responsibly.
+      </p>
+
+      <div class="result-buttons">
+        <button id="btn-retry" class="btn btn-primary">TRY AGAIN 🔄</button>
+        <button id="btn-share" class="btn btn-secondary">SHARE RESULT 📤</button>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
